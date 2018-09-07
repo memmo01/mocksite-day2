@@ -7,6 +7,7 @@ body {
 header {
   background-color: transparent;
   position: sticky;
+  position: -webkit-sticky;
   top: 0px;
 }
 
