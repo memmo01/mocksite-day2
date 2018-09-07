@@ -18,17 +18,17 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#" class="navLink">Contact</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#" class="navLink">About</a>
                 </li>
 
                 <li>
-                    <a href="#">Locations</a>
+                    <a href="#" class="navLink">Locations</a>
                 </li>
                 <li>
-                    <a href="#">Clearance</a>
+                    <a href="#" class="navLink">Clearance</a>
                 </li>
             </ul>
         </nav>
@@ -145,7 +145,20 @@
             </article>
         </section>
     </footer>
-
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $("header").css({ "background-color": "rgba(45,45,45,.5)", "color": "white" })
+                    $(".navLink").css("color", "white")
+                }
+                if ($(this).scrollTop() < 100) {
+                    $("header").css({ "background-color": "transparent", "color": "black" })
+                    $(".navLink").css("color", "black")
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
